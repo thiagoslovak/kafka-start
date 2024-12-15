@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: msintegracaocnae
+  kafka:
+    bootstrap-servers: PLAINTEXT://broker:9090
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+  sql:
+    init:
+      mode: always
+  jpa:
+    hibernate:
+      ddl-aut: update
+    show-sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  backend:
+    host: https://servicodados.ibge.gov.br/api/v2/cnae
+
+server:
+  port: 8080
