@@ -1,4 +1,4 @@
-package br.com.msintegracaoibge.config;
+package br.com.msintegracaoibge.infra;
 
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;

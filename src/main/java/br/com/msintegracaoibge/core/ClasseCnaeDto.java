@@ -1,4 +1,4 @@
-package br.com.msintegracaoibge.dto;
+package br.com.msintegracaoibge.core;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,9 +11,10 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class SesaoCnaeDto {
+public class ClasseCnaeDto {
 
     private String id;
     private String descricao;
     private List<String> observacoes;
+    private GrupoCnaeDto grupo;
 }

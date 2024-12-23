@@ -1,7 +1,7 @@
-package br.com.msintegracaoibge.resource;
+package br.com.msintegracaoibge.controllers;
 
-import br.com.msintegracaoibge.dto.ClasseCnaeDto;
-import br.com.msintegracaoibge.service.IbgeCnaeServiceImpl;
+import br.com.msintegracaoibge.core.ClasseCnaeDto;
+import br.com.msintegracaoibge.application.IbgeCnaeUseCaseImpl;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -15,10 +15,10 @@ import org.springframework.http.HttpStatus;
 
 @RestController
 @RequestMapping(value = "/cnae")
-public class CnaeResource {
+public class CnaeController {
 
     @Autowired
-    private IbgeCnaeServiceImpl ibgeCnaeServiceImpl;
+    private IbgeCnaeUseCaseImpl ibgeCnaeUseCaseImpl;
 
     @GetMapping("/{codigoCnae}")
     @Operation(summary = "Realiaza a busca do cnae.", method = "GET")
@@ -28,6 +28,6 @@ public class CnaeResource {
             @ApiResponse(responseCode = "500", description = "Erro ao realizar a busca do produto.")
     })
     public ResponseEntity<ClasseCnaeDto> consultarCnae(@PathVariable String codigoCnae) {
-        return ResponseEntity.status(HttpStatus.OK).body(ibgeCnaeServiceImpl.consultarCnae(codigoCnae));
+        return ResponseEntity.status(HttpStatus.OK).body(ibgeCnaeUseCaseImpl.consultarCnae(codigoCnae));
     }
 }

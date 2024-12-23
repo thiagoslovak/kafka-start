@@ -1,6 +1,6 @@
-package br.com.msintegracaoibge.client;
+package br.com.msintegracaoibge.infra;
 
-import br.com.msintegracaoibge.dto.ClasseCnaeDto;
+import br.com.msintegracaoibge.core.ClasseCnaeDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Component;

@@ -1,12 +1,13 @@
-package br.com.msintegracaoibge.service;
+package br.com.msintegracaoibge.application;
 
-import br.com.msintegracaoibge.client.IbgeClient;
-import br.com.msintegracaoibge.dto.ClasseCnaeDto;
+import br.com.msintegracaoibge.infra.IbgeClient;
+import br.com.msintegracaoibge.core.ClasseCnaeDto;
+import br.com.msintegracaoibge.core.usecases.CnaeUseCase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class IbgeCnaeServiceImpl implements CnaeValido {
+public class IbgeCnaeUseCaseImpl implements CnaeUseCase {
 
     @Autowired
     private IbgeClient ibgeClient;
